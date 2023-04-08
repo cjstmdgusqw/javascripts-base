@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let arr = [10,20,30];
+        arr.push(40);
+        arr.push(50);
+
+        let varr = [20, 3.14, '홍길동', function(){}, {}, true];
+        // for(const key in varr){
+        //     console.log(varr[key]);
+        // }
+    //     for(const data of varr){
+    //         console.log(data);
+    //     }
+
+        let d1 = arr.pop();
+        console.log(d1);
+        console.log(arr);
+        
+        let tot = 0;
+        for(let i = 0; i < arr.length; i++){
+            tot += arr[i];
+        }
+
+        let d2 = arr.shift();
+        console.log(d2);  // 10      앞에꺼하나제거하는 느낌
+        console.log(arr); // 20 30 40
+
+        arr.unshift(100);  // 반대로 앞에 하나 추가하는 느낌
+        console.log(arr);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

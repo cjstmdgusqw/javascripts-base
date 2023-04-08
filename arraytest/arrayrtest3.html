@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let arr1 = [1,2,3,4,5];
+        let tot = 0;
+        arr1.forEach(function(item, index){
+            tot += item;
+        })
+        console.log(tot); //15
+
+        let str = '';
+        ['I', 'GO', 'home'].forEach((item) => {
+            str += item + ' ';
+        }); 
+        console.log(str); // I Go home
+        
+        // indexof
+        let arr2 = [1, 0, false];
+        console.log(arr2.indexOf(2));
+        console.log(arr2.indexOf(true));
+        console.log(arr2.indexOf(false));
+
+        //includes
+        console.log(arr2.includes(1));
+        console.log(arr2.includes(5));
+
+        //find : 배열의 요소중 함수에서 true인 데이터를 찾아 리턴 갯수..?
+        // 이런 첫번쨰 값만 가져오는거였네 
+        let arr3 = [1,2,3,4,5,6,7,8,9,10,11,12,13];
+        let res = arr3.find(function(item, index, arr){
+            return item % 3 == 0 && item % 2 == 0; 
+        })
+        console.log(res);
+
+        // filter : 배열의 요소중 함수가 true인 모든 요소를 걸러냄
+        // find의 단점을 보완하기 위해서 fillter을 쓴다.
+        let res2 = arr3.filter(function(item){
+            return item % 3 == 0 && item % 2 == 0;
+        })
+        console.log(res2);
+
+        let users =  [{id : 1,  name : "hong"},{id : 2, name : "song"},{id : 3, name : "kong"}]
+        let user = users.find(function(item){
+            return item.id = 2;
+        });
+        console.log(user);
+
+        let student = [{num : 1, name : 'hong', kor : 98, eng : 89, math : 100},
+        {num : 2, name : 'kong', kor : 43, eng : 74, math : 90},
+        {num : 3, name : 'hong', kor : 78, eng : 35, math : 100}];
+
+        // 평균이 80점 이상인 학생들을 걸러냄
+        let stu = student.filter(item => (item.eng + item.kor + item.math) / 3 >= 80);
+        console.log(stu);
+
+        //map
+        let fruits = ['apple', 'banana', 'orange', 'strawberry']
+        let flength = fruits.map(item => item.length);
+        console.log(flength);
+
+        let arr5 = [10,20,30,40,50];
+        let reaser5 = arr5.map(item => item * 10);
+        console.log(reaser5);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
