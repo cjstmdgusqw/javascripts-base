@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>1-1</li>
+        <li>1-2</li>
+    </ul>
+    <ul>
+        <li>2-1</li>
+        <li>2-2</li>
+    </ul>
+    <div class="contents">
+        <ul class = "book">
+            <li class = "chapter">1장</li>
+            <li class = "chapter">2장</li>
+        </ul>
+    </div>
+    <script>
+
+        //querySelectorAll : 여러개 반납
+        // querySelector : 해당하는게 여러개이여도 첫번째 하나만 반납
+        let elems = document.querySelectorAll('ul > li:last-child')
+        // li:last-child 마지막요소를 가지고와야한다
+        elems.forEach(element => {
+            console.log(element.innerHTML);
+        });
+
+        let chapter = document.querySelector('.chapter');
+        console.log(chapter.innerHTML);
+        // closet : 해당요소부터 시작해 DO<트리를 한단계씩 거슬러 올라가면서
+        // 원하는 선택자 요소를 찾으면 검색을 중단하고 해당 요소를 반납한다.
+        console.log(chapter.closest('.book').innerHTML);
+        console.log(chapter.closest('.contents'));
+    </script>
+</body>
+</html>

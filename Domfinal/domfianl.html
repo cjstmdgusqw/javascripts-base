@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <script>
+        let body = document.body;
+        body.style.backgroundColor = 'gray';
+
+        let parent = document.body.parentNode; // body의 부모태그는 html이다
+        console.log(parent);
+
+        let div = document.body.firstElementChild // div
+        console.log(div);
+
+        let ul = div.nextElementSibling; // ul
+        console.log(ul);
+
+        let body2 = div.parentNode; // body
+        console.log(body2);
+
+        let fli = div.nextElementSibling.firstElementChild;
+        console.log(fli.innerHTML);
+
+        let fli2 = div.nextElementSibling.lastElementChild;
+        console.log(fli2.innerHTML);
+
+        let fli3 = div.nextElementSibling.firstElementChild.nextElementSibling;
+        console.log(fli3.innerHTML);
+
+        let ul2 = div.nextElementSibling;
+        console.log(ul2.innerHTML);
+        let children = ul2.children;
+        for(let r of children){
+            console.log(r.innerHTML);
+        }
+    </script>
+    
+</body>
+</html>

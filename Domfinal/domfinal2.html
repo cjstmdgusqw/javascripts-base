@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <div id="elem">element</div>
+    <div id="elem-1">element2</div>
+
+    <input type="radio" name = "gender" value = "male" checked>남
+    <input type="radio" name = "gender" value = "female">여
+
+    <div class="article">글</div>
+    <div class="long article">내용이 긴 글</div>
+    <div></div>
+    <script>
+        elem.style.background = 'red';
+        window["elem-1"].style.background = 'blue';
+        
+        let div2 = document.querySelector('#elem');
+        console.log(div2);
+
+        let lis = document.querySelectorAll('ul > li');
+        console.log(lis);
+        for(let li of lis){
+            console.log(li.innerHTML);
+        }
+
+        let gender = document.querySelectorAll('input');
+        for(let i of gender){
+            console.log(`${i.value} : ${i.checked}`)
+        }
+
+        let radio = document.querySelectorAll('input[type = "radio"]');
+        for(let r of radio){
+            console.log(r.value);
+        }
+
+        let li = document.querySelector('ul > li');
+        console.log(li.innerHTML);
+
+        let sradio = document.querySelector("input[checked]");
+        console.log(sradio.value);
+
+        let articles = document.getElementsByClassName("article");
+        for(let article of articles){
+            console.log(article.innerHTML);
+        }
+    </script>
+</body>
+</html>
