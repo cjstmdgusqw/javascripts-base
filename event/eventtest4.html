@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            let radios = document.querySelectorAll('input[name = "type"]');
+            for(let radio of radios){
+                radio.onchange = function(){
+                    if(this.value == 'normal'){
+                        select.setAttribute('disabled', 'disabled'); // 속성 형식이
+                        // disabled = "disabled"라서 2개가 붙는다
+                    }else{
+                        select.removeAttribute('disabled'); //속성을 삭제하는부분이라 이렇게 한듯
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="radio" name="type" value="normal" checked>일반계좌&nbsp;
+    <input type="radio" name="type" value="special">특수계좌;
+    <select name="" id="select" disabled>
+        <option value="VIP">VIP</option>
+        <option value="Gold">Gold</option>
+        <option value="Silver">Silver</option>
+        <option value="normal">Normal</option>
+    </select>
+</body>
+</html>

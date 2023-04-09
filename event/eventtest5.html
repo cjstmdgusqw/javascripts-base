@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            let selinterest = [];
+            btn.onclick = function(){
+                let cboxs = document.querySelectorAll('[name = "interest"]');
+                let selinterest = [];
+                for(let cbox of cboxs){
+                    if(cbox.checked == true){
+                        selinterest.push(cbox.value);
+                    }
+                }
+                console.log(selinterest);
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="checkbox" name="interest" value = "programming">프로그래밍&nbsp;
+    <input type="checkbox" name="interest" value = "network">네트워크&nbsp;
+    <input type="checkbox" name="interest" value = "database">데이터베이스&nbsp;
+    <input type="checkbox" name="interest" value = "hardware">하드웨어&nbsp;
+    <button id = "btn">선택</button>
+</body>
+</html>

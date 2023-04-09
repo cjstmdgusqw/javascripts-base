@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function change(event) {
+        //     alert(event.value);
+        // }
+
+        // window.onload = function(){
+        //     let rt = document.querySelectorAll('.select');
+        //     for(let r of rt){
+        //         r.onchange = function(){
+        //             alert(r.value);
+        //         }
+        //     }
+        // }
+
+        // window.onload = function(){
+        //     let select = document.getElementById('select');
+        //     select.onchange=function(){
+        //         alert(this.value);
+        //     }
+        // }
+
+        window.onload = function(){
+            let rt = document.querySelectorAll('.select');
+            for(let r of rt){
+                r.onchange = function(){
+                    alert(r.value);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <select name="" id="select">
+        <option value="">선택하세요</option>
+        <option value="g1">VIP</option>
+        <option value="g2">Gold</option>
+        <option value="g3">Silver</option>
+    </select>
+</body>
+</html>

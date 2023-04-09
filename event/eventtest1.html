@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let orders=[{num:1, member : 'hong', date:'2023-03-10'},
+                    {num:2, member : 'song', date:'2023-03-15'},
+                    {num:3, member : 'park', date:'2023-03-17'},
+                    {num:4, member : 'kang', date:'2023-04-02'},
+                    {num:5, member : 'jang', date:'2023-04-05'} ]
+        window.onload = () =>{
+            let table = document.querySelector('table');
+
+            let trlist = orders.map((item) => {
+                return `<tr><td>${item.num}</td><td>${item.member}</td><td>${item.date}</td><td><button class = 'del' id = '${item.num}'>삭제</button></td></tr>`
+            }) 
+            console.log(trlist);
+
+            for(let t of trlist){
+                table.innerHTML += t;
+            }
+
+            let btns = document.querySelectorAll(".del");
+            btns.forEach(btn=>{
+                btn.onclick = function(){ // 클릭을 하면 발생하는 onclick이벤트
+                    let no = this.id;
+                    console.log('id : ' + no);
+                    this.parentNode.parentNode.remove();
+                }
+            })
+        }            
+    </script>
+</head>
+<body>
+    <table id = "table" border = "1">
+        <tr><th>주문번호</th><th>주문자</th><th>주문일자</th><th>삭제</th></tr>
+    </table>
+</body>
+</html>

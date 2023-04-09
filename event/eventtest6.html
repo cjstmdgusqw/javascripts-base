@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let btns = document.getElementsByName('interest');
+            let setinterests = [];
+            for(let btn of btns){
+                    btn.onchange = function(){
+                    if(this.checked==true){
+                        setinterests.push(this.value);
+                    } else {
+                        let idx =  setinterests.indexOf(this.value);
+                        if(idx >=0){
+                            setinterests.splice(idx, 1);
+                        }
+                    }
+                    console.log(setinterests);
+                }
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <input type="checkbox" name="interest" value = "programming">프로그래밍&nbsp;
+    <input type="checkbox" name="interest" value = "network">네트워크&nbsp;
+    <input type="checkbox" name="interest" value = "database">데이터베이스&nbsp;
+    <input type="checkbox" name="interest" value = "hardware">하드웨어&nbsp;
+</body>
+</html>

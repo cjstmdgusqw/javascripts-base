@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function joinSubmit(e){
+            let email = document.getElementById('email').value;
+            if(email.includes('@') == -1){
+                alert("이메일 형식이 틀립니다");
+                // return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="http://kosta.com" onsubmit="return joinSubmit();">
+        아이디 : <input type="text" name = "id" required><br>
+        비밀번호 : <input type="password" name = "password" required><br>
+        이름 : <input type="text" name = "name" required><br>
+        전화번호 : <input type="text" name = "tel" required><br>
+        주소 : <input type="text" name = "address" required><br>
+        이메일 : <input type="text" name = "address" required> <br>
+        <input type="reset" value = "다시쓰기">
+        <input type="text" value="가입"> 
+    </form>
+</body>
+</html>

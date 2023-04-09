@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            // let kosta = document.getElementById('kosta');
+            // kosta.onclick = function(){
+            //     return false;
+            // }
+            // let naver = document.getElementById('naver');
+            // naver.addEventListener('onclick' ,function(e){
+            //     return e;
+            // })
+
+            let naver = document.getElementById('naver');
+            naver.addEventListener('click', function(e){
+                e.preventDefault();
+                // return false; 적용되지 않음
+            })
+        }
+    </script>
+</head>
+<body>
+    <!-- <a href="http://kosta.com" id = "kosta" onclick= "return kostaClick();"">kosta</a> -->
+    <a href="http://naver.com" id = "naver" onclick=" return kostaClick();">naver</a>
+</body>
+</html>
